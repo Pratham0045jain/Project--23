@@ -1,10 +1,10 @@
 class Triangle {
     constructor(x, y, sides, radius) {
       var options = {
-          'restitution':1,
+          'restitution':0,
           'friction':1,
           'density':1.0,
-          'isStatic': true,
+          //'isStatic': true,
 
       }
       this.body = Bodies.polygon(x, y, sides, radius, [options]);
@@ -22,12 +22,12 @@ class Triangle {
 
       var vertex = this.body.vertices;
 
-      push();
-      translate(pos.x, pos.y);
-      rotate(angle);
+      //push();
+      //translate(pos.x, pos.y);
+      //rotate(angle);
       rectMode(CENTER);
       fill("red");
       triangle(vertex[0].x,vertex[0].y,vertex[1].x,vertex[1].y,vertex[2].x,vertex[2].y);
-      pop();
+      //pop();
     }
   };

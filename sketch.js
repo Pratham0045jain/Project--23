@@ -3,7 +3,7 @@ const World= Matter.World;
 const Bodies = Matter.Bodies;
 
 var stick1, stick2, stick3, stick4, stick5, stick7; 
-var ground;
+var ground1;
 var top1, top2, top3; 
 
 var engine, world;
@@ -15,23 +15,27 @@ function setup() {
   
   canvas = createCanvas(400,400);
 
-  ground = new Ground(200,400,400,30);
+  ground1 = new Ground(200,400,400,50);
 
-  stick1 = new Stick(345,185,40,250);
+  stick1 = new Stick(345,260,40,250);
 
   stick2 = new Stick(20,234,20,300);
 
   stick3 = new Stick(380,234,20,300);
 
-  stick4 = new Stick(55,185,40,250);
+  stick4 = new Stick(55,265,40,250);
 
-  stick5 = new Stick(110,125,60,200);
+  stick5 = new Stick(110,390,60,200);
 
-  stick6 = new Stick(290,125,60,200);
+  stick6 = new Stick(290,380,60,200);
 
-  stick7 = new Stick(200,200,100,170);
+  stick7 = new Stick(200,300,100,170);
 
-  top1 = new Triangle(110,100,3,10);
+  top1 = new Triangle(217,150,3,60);
+
+  top2 = new Triangle(60,35,3,23);
+
+  top3 = new Triangle(350,35,3,23);
   
 
 
@@ -44,7 +48,7 @@ function draw() {
 
  
 
-  ground.display();
+  ground1.display();
 
   stick1.display(); 
   stick2.display();
@@ -55,4 +59,7 @@ function draw() {
   stick7.display();
 
   top1.display();
+  top2.display();
+  top3.display();
+
 }
